@@ -1,0 +1,11 @@
+<h2>LCBO Products</h2>
+
+<p>This will show a paged list of all LCBO Products</p>
+
+<% @products['result'].each do |product| %>
+	<section>
+		<%= link_to product['name'], product_path(product['id']) %>
+		<%= product ['price_in_cents'] %>
+		<%= product['primary_category'] %>
+	</section>
+	<% end %>

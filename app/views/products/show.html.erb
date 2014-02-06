@@ -1,0 +1,19 @@
+<h2><%= @product['name'] %></h2>
+
+<p>
+	Price: <%=  @product['price_in_cents'] %>
+</p>
+
+<h2>Inventory</h2>
+
+<% @stores.each do |store| %>
+	<section class="store_info">
+		<h3><%= store['store']['name'] %></h3>
+		quantity: <%= store['quantity'] %>
+		<br>
+		<%= store['store']['address_line_1'] %>,
+		<%= store['store']['city'] %>
+		<br>
+		<%= store['store']['telephone'] %>
+	</section>
+	<% end %>
