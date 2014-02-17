@@ -1,0 +1,12 @@
+<h2>LCBO Stores</h2>
+
+<p>This will show a paged list of all LCBO stores</p>
+
+<% @stores['result'].each do |store| %>
+	<section>
+		<%= link_to store['name'], store_path(store['id']) %>
+
+
+	</section>
+	<% end %>
+

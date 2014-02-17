@@ -1,7 +1,9 @@
+<%= link_to "Back to Products", products_path %>
+
 <h2><%= @product['name'] %></h2>
 
 <p>
-	Price: <%=  @product['price_in_cents'] %>
+	Price: <%= format_price @product['price_in_cents'] %>
 </p>
 
 <h2>Inventory</h2>

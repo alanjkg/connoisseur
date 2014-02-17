@@ -2,8 +2,11 @@ require 'open-uri'
 
 class ProductsController < ApplicationController
   def index
-  	products_json = open('http://lcboapi.com/products').read
+    page = params[:page] || 1
+  	products_json = open('http://lcboapi.com/products?page=' + page.to_s).read
   	@products = JSON.parse(products_json)
+    @page_number = @products["pager"]["current_page"] || 1
+    @next_page = @products["pager"]["next_page"] || @page_number + 1
   end
 
   def show

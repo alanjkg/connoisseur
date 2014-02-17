@@ -1,0 +1,22 @@
+<h1>Store Details: <%= @store['result']['name'] %></h1>
+<h4> Address: <%= @store['result']['address_line_1'] %><br /></h4>
+<h4> City: <%= @store['result']['city'] %><br /> </h4>
+
+<h3>Hours</h3>
+Sunday: <%= @store['result']['sunday_open'].to_i/60 %> - <%= @store['result']['sunday_close'].to_i/60 %>
+<br>
+Monday: <%= @store['result']['monday_open'].to_i/60 %> - <%= @store['result']['monday_close'].to_i/60 %>
+<br>
+Tuesday: <%= @store['result']['tuesday_open'].to_i/60 %> - <%= @store['result']['tuesday_close'].to_i/60 %>
+<br>
+Wednesday: <%= @store['result']['wednesday_open'].to_i/60 %> - <%= @store['result']['wednesday_close'].to_i/60 %>
+<br>
+Thursday: <%= @store['result']['thursday_open'].to_i/60 %> - <%= @store['result']['thursday_close'].to_i/60 %>
+<br>
+Friday: <%= @store['result']['friday_open'].to_i/60 %> - <%= @store['result']['friday_close'].to_i/60 %>
+<br>
+Saturday: <%= @store['result']['saturday_open'].to_i/60 %> - <%= @store['result']['saturday_close'].to_i/60 %>
+<br>
+<br>
+
+<%= link_to "Back to Stores", stores_path %>
